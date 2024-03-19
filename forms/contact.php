@@ -10,8 +10,8 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->Host       = 'smtp.gmail.com';
 $mail->SMTPAuth   = true;
-$mail->Username   = 'daphnepearl101@gmail.com'; 
-$mail->Password   = 'FHFHFH'; 
+$mail->Username   = 'daphnepearl101@gmail.com';
+$mail->Password   = 'jwcj uezm supz pgfy';
 $mail->Port       = 587;
 
 // Set email content (HTML with inline styles)
@@ -24,12 +24,11 @@ $message = htmlspecialchars($_POST['message']);
 $subject = htmlspecialchars($_POST['subject']);
 
 // Set email recipients and sender
-$mail->setFrom('daphnepearl101@gmail.com', 'DAPHNE');
-$mail->addAddress($email, $name); // Use captured email and name
-
-// Set email subject and body using captured data
+$mail->setFrom($email, $name);
+$mail->addAddress($email, $name);
+$mail->addAddress('daphnepearl101@gmail.com');
 $mail->Subject = $subject;
-$mail->Body = "Dear " . $name . ",\n\nThank you for contacting us. We will get back to you as soon as possible.\n\n Message: \n" . $message;
+$mail->Body = "Dear " . $name . ",\n\nThank you for contacting us. We will get back to you as soon as possible.\n\n Message: \n\n" . $message;
 
 // Attempt to send the email and handle potential exceptions
 try {
