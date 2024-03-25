@@ -26,7 +26,7 @@ $subject = htmlspecialchars($_POST['subject']);
 // Set email recipients and sender
 $mail->setFrom($email, $name);
 $mail->addAddress($email, $name);
-$mail->addAddress('daphnepearl101@gmail.com');
+$mail->addAddress('opportunitybridgenow@gmail.com');
 $mail->Subject = $subject;
 $mail->Body = "Dear " . $name . ",\n\nThank you for contacting us. We will get back to you as soon as possible.\n\n Message: \n\n" . $message;
 
